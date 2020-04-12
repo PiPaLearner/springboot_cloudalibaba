@@ -1,0 +1,35 @@
+
+###服务启动端口号
+server:
+  port: 8300
+###服务名称(服务注册到eureka名称)  
+spring:
+    application:
+        name: user-center
+    cloud:
+      nacos:
+        discovery:
+          ###服务注册地址
+          server-addr: 127.0.0.1:8848
+#    redis:
+#      host: 188.131.155.46
+#      port: 6379
+#      password: 123456
+      ###数据库相关连接
+    datasource:
+      username: root
+      password: hope930612
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/microsoft?useUnicode=true&characterEncoding=UTF-8
+
+  ####打印MyBatias日志
+    logging:
+      level:
+        ### 开发环境使用DEBUG 生产环境info或者error
+        com.mayikt.member.mapper: DEBUG
+
+#rocketmq配置信息
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: user_group
