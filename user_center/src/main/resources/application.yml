@@ -16,11 +16,14 @@ spring:
 #      port: 6379
 #      password: 123456
       ###数据库相关连接
+      alibaba:
+        seata:
+          tx-service-group: my_test_seata_group
     datasource:
       username: root
       password: hope930612
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/microsoft?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://127.0.0.1:3306/microsoft?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT
 
   ####打印MyBatias日志
     logging:

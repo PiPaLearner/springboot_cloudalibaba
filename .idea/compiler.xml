@@ -6,10 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway-center" />
         <module name="user_center" />
         <module name="content_center" />
-        <module name="springboot_cloudalibaba" />
+        <module name="gateway-center" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,7 +16,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="content_center" options="-parameters" />
       <module name="gateway-center" options="-parameters" />
-      <module name="springboot_cloudalibaba" options="-parameters" />
+      <module name="springboot_cloudalibaba" options="" />
       <module name="user_center" options="-parameters" />
     </option>
   </component>

@@ -13,10 +13,10 @@ spring:
           # 让gateway通过服务发现组件找到其他的微服务
           enabled: true
 #      routes:
-#        - id: user-center
-#          uri: lb://user-center
+#        - id: content-center
+#          uri: lb://content-center
 #          predicates:
-#            - Path=/user/**
+#            - Path=/content/**
 #        - id: content_route
 #          uri: lb://content-center
 #          predicates:

@@ -7,12 +7,17 @@ spring:
     application:
         name: content-center
     cloud:
+      alibaba:
+        seata:
+          tx-service-group: my_test_seata_group
+
       nacos:
         discovery:
           ###服务注册地址
           server-addr: 127.0.0.1:8848
-          namespace: f74322d6-85dd-4cfa-ad39-bc52d7a9a454
-          cluster-name: content
+#          namespace: f74322d6-85dd-4cfa-ad39-bc52d7a9a454
+#          cluster-name: content
+
       #    redis:
 #      host: 188.131.155.46
 #      port: 6379
@@ -22,7 +27,7 @@ spring:
       username: root
       password: hope930612
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/microsoft?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT
 
   ####打印MyBatias日志
     logging:
