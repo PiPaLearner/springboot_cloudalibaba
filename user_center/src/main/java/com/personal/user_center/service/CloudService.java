@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class CloudService {
@@ -32,4 +33,7 @@ public class CloudService {
         return 1/a;
     }
 
+    public void addListUser(List<CloudUser> cloudUsers){
+
+    }
 }

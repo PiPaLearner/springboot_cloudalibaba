@@ -7,11 +7,12 @@ import org.springframework.stereotype.Service;
 
 @RocketMQMessageListener(consumerGroup = "content_group", topic = "content-topic")
 @Service
-public class ContentConsumer implements RocketMQListener<CloudUser> {
+public class ContentConsumer implements RocketMQListener<CloudUser>  {
 
 
     @Override
     public void onMessage(CloudUser message) {
         System.out.println(message.toString());
+
     }
 }

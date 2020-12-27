@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -17,8 +18,10 @@ public class CloudUser {
     @GeneratedValue(generator = "JDBC")
     private String id;
 
+    @NotNull
     private String name;
 
+    @NotNull(message="年龄为空")
     private Integer age;
 
     private String password;

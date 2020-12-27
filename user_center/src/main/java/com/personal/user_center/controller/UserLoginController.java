@@ -9,6 +9,9 @@ import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.List;
+
 @RequestMapping("user")
 @RestController
 public class UserLoginController {
@@ -27,12 +30,20 @@ public class UserLoginController {
     }
 
     @PostMapping("/addUser")
-    public CloudUser addUser(@RequestBody CloudUser userInfo){
-        userInfo.setName("lisi");
-        userInfo.setAge(32);
+    public CloudUser addUser(@RequestBody @Valid CloudUser userInfo){
+
         int i = cloudService.addUser(userInfo);
         return userInfo;
     }
+
+
+    @PostMapping("/addListUser")
+    public String addListUser(@RequestBody @Valid List<CloudUser> userInfoList){
+
+        cloudService.addListUser(userInfoList);
+        return "success";
+    }
+
 
     @PostMapping("/addUserOrder")
     @GlobalTransactional
@@ -44,4 +55,5 @@ public class UserLoginController {
         int m = cloudService.addUserOrder(omsOrder,userInfo,1);
         return userInfo;
     }
+
 }
